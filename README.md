@@ -8,16 +8,6 @@ You'll need a **JDK-8** and **Maven** to run :
 
 `mvn clean install`
 
-### I want to build it with docker
-
-Build the provided image :
-
-`docker build -t my-maven .`
-
-Run the build in a container
-
-`docker run -it --rm --name my-maven-project -v "$PWD":/usr/src/mymaven -w /usr/src/mymaven maven:3.5.0-jdk-8 mvn clean install`
-
 ## How to use it ?
 
 ### Add Dependency to your project
@@ -37,3 +27,13 @@ Run the build in a container
 private final WordCounter collectionWordCounter = new CollectionWordCounter();
 private final WordCounter arrayWordCounter = new ArrayWordCounter();
 ```    
+
+## I want to build it with docker
+
+Build the provided image :
+
+`docker build -t my-maven .`
+
+Run the build in a container
+
+`docker run -it --rm --name my-maven-project -v "$PWD":/usr/src/mymaven -w /usr/src/mymaven maven:3.5.0-jdk-8 mvn clean install`
