@@ -14,7 +14,7 @@ You'll need a **JDK-8** and **Maven** to run :
 
 ```xml
 <dependency>
-	<groupId>om.jeremp</groupId>
+	<groupId>com.jeremp</groupId>
 	<artifactId>word-counter</artifactId>
 	<version>1.0</version>	
 </dependency>    
