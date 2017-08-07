@@ -30,8 +30,6 @@ public class ArrayWordCounter implements WordCounter {
 		return sb.toString();		
 	}
 
-
-	
 	/**
 	 * Build an array containing all distinct words of a phrase
 	 * @param inputText the given phrase
@@ -68,6 +66,12 @@ public class ArrayWordCounter implements WordCounter {
 		return -1; 
 	}
 	
+	/**
+	 * Count occurences of words in a phrase
+	 * @param words the words to count
+	 * @param phrase the input sentence
+	 * @return 
+	 */
 	private int[] countWords(String[] words, String[] phrase){
 		int[] result = new int[words.length];
 		for (int indexWord = 0; indexWord < words.length; indexWord++) {
@@ -76,6 +80,12 @@ public class ArrayWordCounter implements WordCounter {
 		return result;
 	}
 	
+	/**
+	 * Count the number of times a word appear in a sentence
+	 * @param word
+	 * @param phrase
+	 * @return 
+	 */
 	private int countWord(String word, String[] phrase){
 		int counter = 0 ;
 		for(String s : phrase){
@@ -86,6 +96,11 @@ public class ArrayWordCounter implements WordCounter {
 		return counter ;
 	}
 	
+	/**
+	 * Split a phrase in an array of words
+	 * @param phrase
+	 * @return 
+	 */
 	private String[] splitWords(String phrase){
 		if(phrase!=null && phrase.trim().length()>0){
 			return phrase.split(" ");
