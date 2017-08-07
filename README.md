@@ -4,9 +4,19 @@ A simple Java utility to count words in a sentence.
 
 ## How to build it ? 
 
-You must have a JDK8 and Maven to run : 
+You'll need a **JDK-8** and **Maven** to run : 
 
 `mvn clean install`
+
+### I want to build it with docker
+
+Build the provided image :
+
+`docker build -t my-maven .`
+
+Run the build in a container
+
+`docker run -it --rm --name my-maven-project -v "$PWD":/usr/src/mymaven -w /usr/src/mymaven maven:3.5.0-jdk-8 mvn clean install`
 
 ## How to use it ?
 
